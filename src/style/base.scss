@@ -10,4 +10,19 @@ html{
 body{
   font-weight: 400;
   color: $color-gray-4d;
+  font-family: $font-encode;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.layout{
+  display: grid;
+  grid-template-rows: [header-s] 13.6rem [header-e bar-s] 4rem [bar-e] 1fr [content-e page-e];
+  grid-template-columns: [page-s] 14rem [content-s] 1fr [content-e] 14rem [page-e]
+}
+.bar{
+  grid-column: page-s/page-e;
+  grid-row: bar-s/bar-e;
+  background-color: $color-gray-e6;
+  height: 4rem;
 }

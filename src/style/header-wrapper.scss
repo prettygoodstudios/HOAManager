@@ -1,7 +1,10 @@
 .header-wrapper{
+  grid-row: header-s/header-e;
+  grid-column: content-s/content-e;
   display: grid;
   grid-template-columns: [s] 1fr [e];
   grid-template-rows: [title-s] 3rem [title-e sub-s] 2rem [sub-e];
+  font-family: $font-encode;
   &__title{
     grid-row: title-s/title-e;
     grid-column: s/e;
