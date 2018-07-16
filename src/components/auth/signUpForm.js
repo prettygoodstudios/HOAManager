@@ -4,8 +4,9 @@ import {FormInput, FormButton} from "../formFields";
 import TextLink from "../TextLink";
 class SignUpForm extends Component{
   render(){
+    const {handleSubmit} = this.props;
     return(
-      <form className="sign-up-form">
+      <form className="sign-up-form" onSubmit={handleSubmit}>
         <Field component={FormInput} name="unit" title="Unit Number" type="number" className="sign-up-form__unit" placeholder="Enter Unit Number" input=""/>
         <Field component={FormInput} name="name" title="Full Name" type="text" className="sign-up-form__name" placeholder="Enter Full Name" input=""/>
         <Field component={FormInput} name="email" title="Email" type="email" className="sign-up-form__email" placeholder="Enter Email" input=""/>
