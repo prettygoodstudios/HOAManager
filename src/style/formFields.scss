@@ -1,0 +1,32 @@
+.form-input{
+  &__label{
+    color: $color-red;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 23rem;
+  }
+  &__input{
+    height: 3rem;
+    width: 50rem;
+    border: 1px solid $color-gray-e6;
+    font-weight: 500;
+    line-height: 23rem;
+    font-size: 1.8rem;
+    padding-left: 2.0rem;
+  }
+}
+.form-input{
+  display: grid;
+  grid-template-columns: 129px 500px;
+  align-items: center;
+  width: 629;
+  justify-content: center;
+  &__label{
+    grid-row: 1/-1;
+    grid-column: 1/2;
+  }
+  &__input{
+    grid-row: 1/-1;
+    grid-column: 2/3;
+  }
+}
