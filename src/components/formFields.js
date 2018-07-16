@@ -10,3 +10,14 @@ export class FormInput extends Component {
     );
   }
 }
+
+export class FormButton extends Component {
+  render(){
+    const {className, title, type, name} = this.props;
+    return(
+      <div className={`${className} form-button`}>
+        <button className="form-button__button" >{title}</button>
+      </div>
+    );
+  }
+}

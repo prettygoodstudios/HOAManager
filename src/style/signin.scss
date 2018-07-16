@@ -5,9 +5,19 @@
 .sign-in-form{
   display: grid;
   &__title{
-    
+
   }
   &__input{
 
+  }
+  &__buton{
+    margin-top: 3.0rem;
+  }
+  &__text-links{
+    margin-top: 4.0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
   }
 }

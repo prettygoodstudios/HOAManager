@@ -13,11 +13,13 @@
     line-height: 23rem;
     font-size: 1.8rem;
     padding-left: 2.0rem;
+    border-radius: 0.5rem;
   }
 }
 .form-input{
   display: grid;
   grid-template-columns: 129px 500px;
+  grid-auto-rows: 6rem;
   align-items: center;
   width: 629;
   justify-content: center;
@@ -28,5 +30,21 @@
   &__input{
     grid-row: 1/-1;
     grid-column: 2/3;
+  }
+}
+.form-button{
+  display: grid;
+  justify-content: center;
+  &__button{
+    height: 4rem;
+    width: 21.6rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: $color-red;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.8rem;
+    text-align: center;
   }
 }
