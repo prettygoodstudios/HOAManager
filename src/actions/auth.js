@@ -1,13 +1,13 @@
-import axios from "./axios";
+import axios from "axios";
 import {ROOT_URL} from "../config";
 export function signUp(fields, success){
-  console.log(fields);
   return function(dispatch){
-    axios.post(`${ROOT_URL}/signUp`).then((data) => {
-
+    axios.post(`${ROOT_URL}/signUp`, fields).then((data) => {
+      console.log('Data:',data);
+      success();
     }).catch((error) => {
       if(error){
-        console.log("Error Occurred: ",error);
+        console.log("Error Occurred:",error);
       }
     });
   }
