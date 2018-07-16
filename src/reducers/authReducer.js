@@ -11,6 +11,7 @@ export default function(state = INIT_STATE, action){
       const {user} = action.payload;
       return {
         ...state,
+        authenticated: true,
         user: user
       }
     default: return state;

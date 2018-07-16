@@ -1,2 +1,2 @@
-import {signUp} from "./auth";
-export {signUp};
+import {signUp, signIn} from "./auth";
+export {signUp, signIn};
