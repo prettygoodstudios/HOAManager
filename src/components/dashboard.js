@@ -18,10 +18,24 @@ class Dashboard extends Component {
       ]
     }
   }
+  handleTabChange = (title) => {
+    let tabs = this.state.tabs.map((t) => {
+      let tab = t;
+      if(t.title == title){
+        tab.active = true;
+      }else{
+        tab.active = false;
+      }
+      return tab;
+    });
+    this.setState({
+      tabs: tabs
+    });
+  }
   render(){
     return(
       <div className="dashboard">
-        <TabNav tabs={this.state.tabs}/>
+        <TabNav tabs={this.state.tabs} handleTabChange={this.handleTabChange}/>
       </div>
     );
   }

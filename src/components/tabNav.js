@@ -10,12 +10,18 @@ class TabNav extends Component {
       <div className="tab-nav">
         <div className="tab-nav__tabs">
           {this.props.tabs.map((t,i) => {
-              return <a className="tab-nav__tab">{t.title}</a>;
+              return <a className="tab-nav__tab" key={i} onClick={() => this.props.handleTabChange(t.title)}>{t.title}</a>;
           })}
         </div>
-        <div className="">
-         asdfklfadskljfadjskllfjkadsjlkfadsl
-        </div>
+        {this.props.tabs.filter((t) => {
+            return t.active;
+        }).map((t,i) => {
+            return (
+              <div className="tab-nav__component" key={i}>
+                {t.component}
+              </div>
+            );
+        })}
       </div>
     );
   }
