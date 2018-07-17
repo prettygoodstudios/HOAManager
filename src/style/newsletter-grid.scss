@@ -1,0 +1,7 @@
+.newsletter-grid{
+  display: grid;
+  grid-row: content-s/content-e;
+  height: 100%;
+  grid-template-rows: [box-s] 16rem [box-e archive-s] 1fr [archive-e];
+  grid-template-columns: [box-s archive-s] 16rem [box-e newsletter-s] 1fr [newsletter-e];
+}

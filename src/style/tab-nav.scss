@@ -1,6 +1,6 @@
 .tab-nav{
   display: grid;
-  grid-template-rows: [tabs-s] 50px [tabs-e content-s] 1fr [content-e];
+  grid-template-rows: [tabs-s] 70px [tabs-e content-s] 1fr [content-e];
   &__tabs{
     display: grid;
     grid-template-columns: repeat(auto-fill, 1fr);
@@ -12,7 +12,7 @@
     grid-column-gap: 44px;
     grid-row: tabs-s/tabs-e;
     border-bottom: 1px solid $color-gray-e6;
-    margin-bottom: 2rem;
+    grid-row-gap: 2rem;
   }
   &__tab{
     font-size: 1.6rem;
