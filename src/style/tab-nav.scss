@@ -18,9 +18,16 @@
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 500;
+    height: 100%;
     text-align: center;
     width: 9rem;
-    border-bottom: 1px solid #d70000;
-    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid rgba(0,0,0,0);
+  }
+  &__active{
+    color: $color-red;
+    border-bottom: 2px solid $color-red;
   }
 }
