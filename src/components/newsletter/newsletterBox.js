@@ -5,6 +5,7 @@ export default function({date}) {
     <div className="newsletter-box">
       <div className="newsletter-box__day">{date.getDate()}</div>
       <div className="newsletter-box__month-year">{`${months[date.getUTCMonth()]} ${date.getFullYear()}`}</div>
+      <div className="newsletter-box__caret"></div>
     </div>
   );
 }
