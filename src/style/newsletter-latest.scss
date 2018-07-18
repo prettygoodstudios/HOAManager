@@ -40,4 +40,28 @@
       line-height: 2.2rem;
     }
   }
+  &__edit-button{
+    grid-column: s/e;
+    justify-self: end;
+    grid-row: s/m;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+  &__button{
+    border-radius: 1.6rem;
+    border: 1px solid white;
+    color: white;
+    width: 7.6rem;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover{
+      color: $color-red;
+      border: 1px solid $color-red;
+    }
+  }
 }
