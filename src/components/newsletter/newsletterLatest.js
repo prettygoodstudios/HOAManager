@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Button from "../button";
 class NewsletterLatest extends Component {
   handleEdit = () => {
-    console.log("Editing");
+    this.props.history.push("newsletter/edit");
   }
   render(){
     const {imageURL, body, title} = this.props;

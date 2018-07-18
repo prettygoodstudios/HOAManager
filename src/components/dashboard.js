@@ -9,7 +9,7 @@ class Dashboard extends Component {
         {
           title: 'Newsletter',
           active: false,
-          component: <NewsletterGrid />
+          component: <NewsletterGrid history={this.props.history}/>
         },
         {
           title: 'Requests',

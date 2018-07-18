@@ -15,7 +15,7 @@ export default function(ComposedComponent) {
     }
     render(){
       return(
-        <ComposedComponent />
+        <ComposedComponent {...this.props}/>
       );
     }
   }
