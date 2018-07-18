@@ -1,0 +1,43 @@
+.newsletter-latest{
+  border: 1px solid $color-gray-e6;
+  border-radius: 5px;
+  overflow: hidden;
+  grid-row: s/e;
+  grid-column: latest-s/latest-e;
+  height: 100%;
+  display: grid;
+  grid-template-rows: [s] 258px [m] 1fr [e];
+  grid-template-columns: [s] 1fr [e];
+  &__title{
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 5rem;
+  }
+  &__title{
+    grid-column: s/e;
+    grid-row: s/m;
+  }
+  &__image{
+    grid-column: s/e;
+    grid-row: s/m;
+    overflow: hidden;
+    z-index: -10;
+    img{
+      min-width: 100%;
+      min-height: 100%;
+      max-width: 200%;
+    }
+  }
+  &__body{
+    grid-column: s/e;
+    grid-row: m/e;
+    padding: 20px;
+    p{
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+}
