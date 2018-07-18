@@ -1,3 +1,43 @@
 .newsletter-archive{
+  margin-top: 1rem;
   grid-row: archive-s/archive-e;
+  display: grid;
+  grid-auto-rows: [title-s] 3.7rem [title-e items-s] 1fr [items-e];
+  &__title{
+    color: $color-red;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $color-gray-e6;
+    margin-bottom: 1rem;
+  }
+  &__items{
+
+  }
+}
+.archive-items{
+  display: grid;
+  grid-row-gap: 1.6rem;
+  grid-auto-rows: repeat(auto-fit,1fr);
+  &__item{
+
+  }
+}
+.archive-item{
+  display: grid;
+  grid-row-gap: 3px;
+  &__title{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    &:hover{
+      font-size: 1.6rem;
+      font-weight: bold;
+      transition: all 1.2s ease;
+    }
+  }
+  &__date{
+    color: $color-red;
+    font-family: $font-encode-condensed;
+  }
 }
