@@ -4,14 +4,20 @@
 }
 .sign-in-form{
   display: grid;
+  grid-template-columns: [s] 1fr [input-s] 629px [input-e] 1fr [e];
+  justify-items: center;
   &__title{
-
+    grid-column: s/e;
   }
   &__input{
-
+    grid-column: input-s/input-e;
   }
-  &__buton{
+  &__button{
     margin-top: 3.0rem;
+    grid-column: input-s/input-e;
+  }
+  &__log-in{
+    grid-column: input-s/input-e;
   }
   &__text-links{
     margin-top: 4.0rem;
@@ -19,5 +25,6 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    grid-column: input-s/input-e;
   }
 }
