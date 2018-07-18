@@ -4,4 +4,5 @@
   height: 100%;
   grid-template-rows: [box-s] 16rem [box-e archive-s] 1fr [archive-e];
   grid-template-columns: [box-s archive-s] 16rem [box-e newsletter-s archive-e] 1fr [newsletter-e];
+  grid-column-gap: 3rem;
 }
