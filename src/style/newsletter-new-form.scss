@@ -13,6 +13,7 @@
     grid-column: input-e/e;
     grid-row: 1/-1;
     align-self: start;
+    justify-self: start;
     margin-top: 1rem;
   }
   .red{
@@ -36,5 +37,14 @@
       width: 10rem !important;
       font-weight: lighter;
     }
+  }
+}
+.form-button__button{
+  transition: 1s all ease;
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    transform: scale(0.9) translateY(2.05px);
   }
 }
