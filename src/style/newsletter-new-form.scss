@@ -1,4 +1,40 @@
 .new-newsletter-form{
   display: grid;
-  grid-template-columns: [s input-s] 1020px [input-e] 1fr [e];
+  grid-template-columns: [s input-s] 800px [input-e] 200px [e];
+  grid-template-rows: [s] 5rem [input-s] 1fr [input-e e];
+  &__submit{
+    grid-column: input-e/e;
+    grid-row: 1/-1;
+    justify-self: end;
+    align-self: start;
+    margin-top: 1rem;
+  }
+  &__cancel{
+    grid-column: input-e/e;
+    grid-row: 1/-1;
+    align-self: start;
+    margin-top: 1rem;
+  }
+  .red{
+    button{
+      background-color: $color-red !important;
+      color: white !important;
+      &:hover{
+        background-color: white;
+        border: 1px solid $color-red !important;
+        color: $color-red;
+      }
+    }
+  }
+  .small{
+    button{
+      background-color: white;
+      border: 1px solid $color-red;
+      color: $color-red;
+      font-size: 1.5rem !important;
+      height: 3rem !important;
+      width: 10rem !important;
+      font-weight: lighter;
+    }
+  }
 }

@@ -1,13 +1,17 @@
 import React, {Component} from "react";
 import {reduxForm, Field} from "redux-form";
-import {FormInput, FormButton} from "../formFields";
+import {FormInput, FormButton, FormTextArea} from "../formFields";
 import TextLink from "../TextLink";
 class NewsletterNewForm extends Component{
   render(){
     const {handleSubmit} = this.props;
     return(
       <form className="new-newsletter-form" onSubmit={handleSubmit}>
-        <Field component={FormInput} name="email" title="Email" type="email" className="new-newsletter-form__email" placeholder="Enter Email" />
+        <div></div>
+        <Field component={FormInput} name="title" title="Title" type="text" className="new-newsletter-form__title" placeholder="Newsletter Title" />
+        <Field component={FormTextArea} name="body" title="Body" type="text" className="new-newsletter-form__body" placeholder="Newsletter Body" />
+        <Field name="cancel" title="Cancel" className="new-newsletter-form__cancel" component={FormButton} type="button" small={true} red={false} onClick={this.props.onCancel}/>
+        <Field name="submit" title="Submit" className="new-newsletter-form__submit" component={FormButton} type="submit" small={true} red={true} />
       </form>
     );
   }
