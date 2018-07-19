@@ -1,9 +1,6 @@
 .form-input{
   &__label{
-    color: $color-red;
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 23rem;
+    @include redtitle;
   }
   &__input{
     height: 3rem;
@@ -72,10 +69,7 @@
 .form-textarea{
   height: 20rem;
   &__label{
-    color: $color-red;
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 23rem;
+    @include redtitle;
   }
   &__input{
     width: 100%;
@@ -87,5 +81,17 @@
     border-radius: 0.5rem;
     font-family: $font-encode;
     resize: none;
+  }
+}
+
+.form-image{
+  &__title{
+    @include redtitle;
+  }
+  &__image{
+    width: 16rem;
+    height: 13.7rem;
+    display: flex;
+    border: 1px solid $color-gray-4d;
   }
 }
