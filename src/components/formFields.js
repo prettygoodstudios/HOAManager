@@ -39,12 +39,13 @@ export class FormButton extends Component {
 }
 export class FormImage extends Component {
   render(){
-    let {className, title, name, imageURL, type} = this.props;
+    let {className, title, name, imageURL, type, input} = this.props;
     return(
       <div className={`form-image ${className}`}>
         <label className="form-image__title">{title}</label>
         <img className="form-image__image" src={imageURL} />
-        <input type={type}  />
+        <input className="form-image__replace" type="button" value="Replace" onClick={() => document.getElementById("file") ? document.getElementById("file").click() : ''}/>
+        <input type={type} style={{display: 'none'}} id="file" name="file" accepts="image/*" {...input} />
       </div>
     );
   }

@@ -85,13 +85,31 @@
 }
 
 .form-image{
+  display: grid;
+  grid-template-rows: [title-s] 1fr [title-e image-s] 13.7rem [image-e];
+  grid-template-columns: [s] 16rem [e];
   &__title{
+    grid-row: title-s/title-e;
+    grid-column: s/e;
     @include redtitle;
   }
   &__image{
+    grid-column: s/e;
+    grid-row: image-s/image-e;
     width: 16rem;
     height: 13.7rem;
     display: flex;
-    border: 1px solid $color-gray-4d;
+    background-color: $color-gray-4d;
+  }
+  &__replace{
+    grid-row: image-s/image-e;
+    grid-column: s/e;
+    width: 13rem;
+    height: 2.4rem;
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    color: $color-red;
+    justify-self: center;
+    align-self: center;
   }
 }
