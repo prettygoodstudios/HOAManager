@@ -16,6 +16,10 @@
     justify-self: start;
     margin-top: 1rem;
   }
+  &__image{
+    grid-row: 4;
+    grid-column: s;
+  }
   .red{
     button{
       background-color: $color-red !important;

@@ -37,3 +37,14 @@ export class FormButton extends Component {
     );
   }
 }
+export class FormImage extends Component {
+  render(){
+    let {className, title, name, imageURL, type} = this.props;
+    return(
+      <div className={`form-image ${className}`}>
+        <label className="form-image__title">{title}</label>
+        <img className="form-image__image" type={type} src={imageURL} />
+      </div>
+    );
+  }
+}
