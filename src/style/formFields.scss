@@ -100,6 +100,7 @@
     height: 13.7rem;
     display: flex;
     background-color: $color-gray-4d;
+    object-fit: cover;
   }
   &__replace{
     grid-row: image-s/image-e;

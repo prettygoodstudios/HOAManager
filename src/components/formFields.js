@@ -38,14 +38,19 @@ export class FormButton extends Component {
   }
 }
 export class FormImage extends Component {
+  handleSelectedImage = (event) => {
+    console.log("hey there");
+    let img = document.getElementById("frm-img");
+    img.src = URL.createObjectURL(event.target.files[0]);
+  }
   render(){
     let {className, title, name, imageURL, type, input} = this.props;
     return(
       <div className={`form-image ${className}`}>
         <label className="form-image__title">{title}</label>
-        <img className="form-image__image" src={imageURL} />
+        <img className="form-image__image" id="frm-img" src={imageURL} />
         <input className="form-image__replace" type="button" value="Replace" onClick={() => document.getElementById("file") ? document.getElementById("file").click() : ''}/>
-        <input type={type} style={{display: 'none'}} id="file" name="file" accepts="image/*" {...input} />
+        <input type={type} style={{display: 'none'}} id="file" name="file" accepts="image/*" {...input} onChange={(event) => this.handleSelectedImage(event)}/>
       </div>
     );
   }
