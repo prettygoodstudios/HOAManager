@@ -8,6 +8,11 @@ class EditNewsletter extends Component {
   onCancel = () => {
     console.log("canceling");
   }
+
+  componentDidMount(){
+    console.log(this.props.match.params.id);
+  }
+
   render(){
     return(
       <div className="new-newsletter">

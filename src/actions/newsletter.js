@@ -23,3 +23,10 @@ export function fetchNewsletters(){
     payload: repsonse.data
   };
 }
+
+export function fetchNewsletterWithId(id){
+  return {
+    type: FETCH_NEWSLETTER_ID,
+    payload: id
+  }
+}
