@@ -14,7 +14,7 @@ export default function(state = INIT_STATE, action){
         newsletters: newsletters
       }
     case FETCH_NEWSLETTER_ID:
-      const newsletterID = action.id;
+      const newsletterID = action.payload.id;
       let newsletterToEdit = {};
       state.newsletters.forEach((n) => {
         if(n._id == newsletterID){

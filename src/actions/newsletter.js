@@ -1,4 +1,4 @@
-import {SET_NEWSLETTERS} from "./types";
+import {SET_NEWSLETTERS, FETCH_NEWSLETTER_ID} from "./types";
 export function fetchNewsletters(){
   const repsonse = {
     data: [
@@ -27,6 +27,8 @@ export function fetchNewsletters(){
 export function fetchNewsletterWithId(id){
   return {
     type: FETCH_NEWSLETTER_ID,
-    payload: id
+    payload: {
+      id: id
+    }
   }
 }

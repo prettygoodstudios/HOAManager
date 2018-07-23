@@ -4,7 +4,11 @@ import {FormInput, FormButton, FormTextArea, FormImage} from "../formFields";
 import TextLink from "../TextLink";
 class NewsletterNewForm extends Component{
   render(){
-    const {handleSubmit} = this.props;
+    const {handleSubmit, editNewsletter} = this.props;
+    if(editNewsletter){
+      const { title, body, imageURL} = editNewsletter;
+      console.log(title, body, imageURL);
+    }
     return(
       <form className="new-newsletter-form" onSubmit={handleSubmit}>
         <div></div>
