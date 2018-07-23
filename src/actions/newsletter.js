@@ -7,14 +7,14 @@ export function fetchNewsletters(){
         title: "Birthday",
         body: "afdjkldfafdskladjfsklfdasjdfasklfadjsl",
         date: new Date(),
-        imageUrl: "https://s3-us-west-2.amazonaws.com/staticgeofocus/Asset+6%404x.png"
+        imageURL: "https://cdn.vox-cdn.com/thumbor/oIv2QlLw2ef29uSoqzU3lzVMLiw=/0x0:3000x2001/1200x800/filters:focal(1260x761:1740x1241)/cdn.vox-cdn.com/uploads/chorus_image/image/56647077/DOMAIN_09.0.jpg"
       },
       {
         _id: 43535553989,
         title: "Birthday2",
         body: "fadssfdrwqiureiafdjkldfafdskladjfsklfdasjdfasklfadjsl",
         date: new Date(),
-        imageUrl: "https://s3-us-west-2.amazonaws.com/staticgeofocus/Asset+6%404x.png"
+        imageURL: "https://cdn.vox-cdn.com/thumbor/oIv2QlLw2ef29uSoqzU3lzVMLiw=/0x0:3000x2001/1200x800/filters:focal(1260x761:1740x1241)/cdn.vox-cdn.com/uploads/chorus_image/image/56647077/DOMAIN_09.0.jpg"
       }
     ]
   };

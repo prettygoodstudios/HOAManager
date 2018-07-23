@@ -1,5 +1,11 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+
+import * as actions from "../../actions";
+
 import Button from "../button";
+
+
 class NewsletterLatest extends Component {
   handleEdit = () => {
     this.props.history.push("newsletter/edit");
@@ -21,5 +27,12 @@ class NewsletterLatest extends Component {
   }
 }
 
+function mapStateToProps(state){
+  const {newsletters} = state.newsletter;
+  const latest = newsletters[0];
+  return {
+    ...latest
+  };
+}
 
-export default NewsletterLatest;
+export default connect(mapStateToProps, actions)(NewsletterLatest);
