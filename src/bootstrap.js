@@ -16,6 +16,7 @@ import Layout from "./components/layout";
 //Dashbaord Components
 import Dashboard from "./components/dashboard";
 import NewNewsletter from "./components/newsletter/newNewsletter";
+import EditNewsletter from "./components/newsletter/editNewsletter";
 import history from "./history";
 function main() {
   ReactDOM.render(
@@ -28,6 +29,7 @@ function main() {
             <Route path="/signup" component={SignUp} />
             <Route path="/dashboard" component={RequireAuth(Dashboard)} />
             <Route path="/newsletter/new" component={RequireAuth(NewNewsletter)} />
+            <Route path="/newsletter/edit/:id" component={RequireAuth(EditNewsletter)} />
           </Layout>
         </Switch>
       </Router>
