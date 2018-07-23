@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import * as actions from "../../actions";
+import {connect} from "react-redux";
 import NewsletterBox from "./newsletterBox";
 import NewsletterArchive from "./newsletterArchive";
 import NewsletterLatest from "./newsletterLatest";
@@ -6,6 +8,10 @@ import Button from "../button";
 class NewsletterGrid extends Component{
   handleNewNewsletter = () => {
     this.props.history.push("/newsletter/new");
+  }
+  componentDidMount = () => {
+    console.log("hello world reducers");
+    this.props.fetchNewsletters();
   }
   render(){
     const latest = {
@@ -25,4 +31,4 @@ class NewsletterGrid extends Component{
     );
   }
 }
-export default NewsletterGrid;
+export default connect(null, actions)(NewsletterGrid);
