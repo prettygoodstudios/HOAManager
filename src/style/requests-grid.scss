@@ -4,4 +4,10 @@
   grid-template-rows: [add-s] 4.7rem [add-e s box-s] 16rem [box-e archive-s] 1fr [archive-e] 1fr [e];
   grid-template-columns: [box-s archive-s] 16rem [box-e latest-s archive-e] 1fr [latest-e];
   grid-column-gap: 3rem;
+
+  &__button{
+    color: $color-gray-4d;
+    border-color: $color-gray-4d;
+    background-color: white;
+  }
 }
