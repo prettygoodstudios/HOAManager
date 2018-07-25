@@ -1,8 +1,10 @@
 import React, {Component} from "react";
-
 import {connect} from "react-redux";
 
 import * as actions from "../../actions";
+
+import NewsletterBox from "./newsletterBox";
+import NewsletterLatest from "./newsletterLatest";
 
 class NewsletterDetail extends Component {
 
@@ -13,7 +15,8 @@ class NewsletterDetail extends Component {
   render(){
     return(
       <div className="newsletter-detail">
-        hello world
+        <NewsletterBox />
+        <NewsletterLatest />
       </div>
     );
   }
