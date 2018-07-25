@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import TabNav from "./tabNav";
 import NewsletterGrid from "./newsletter/newsletterGrid";
+import RequestsGrid from "./requests/requestsGrid";
 class Dashboard extends Component {
   constructor(props){
     super(props);
@@ -14,7 +15,7 @@ class Dashboard extends Component {
         {
           title: 'Requests',
           active: false,
-          component: <h4>Requests</h4>
+          component: <RequestsGrid />
         }
       ]
     }
