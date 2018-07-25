@@ -1,4 +1,19 @@
 .newsletter-detail{
   grid-row: content-s/content-e;
   grid-column: content-s/content-e;
+  display: grid;
+  grid-template-rows: [title-s] 50px [title-e add-s] 4.7rem [add-e s box-s] 16rem [box-e archive-s] 1fr [archive-e] 1fr [e];
+  grid-template-columns: [box-s archive-s] 16rem [box-e latest-s archive-e] 1fr [latest-e];
+  grid-column-gap: 3rem;
+  &__title{
+    grid-row: title-s/title-e;
+    grid-column: box-s/latest-e;
+  }
+  &__cancel{
+    grid-row: 1;
+    grid-column: latest-s/latest-e;
+    justify-self: end;
+    align-self: end;
+    margin-bottom: 1fr;
+  }
 }

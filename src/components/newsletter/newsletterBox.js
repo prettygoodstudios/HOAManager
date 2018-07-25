@@ -19,12 +19,5 @@ class NewsletterBox extends Component {
   }
 }
 
-function mapStateToProps(state){
-  const {newsletters} = state.newsletter;
-  const latest = newsletters[0];
-  return {
-    ...latest
-  };
-}
 
-export default connect(mapStateToProps, actions)(NewsletterBox);
+export default NewsletterBox;
