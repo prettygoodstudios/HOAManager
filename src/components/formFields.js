@@ -1,22 +1,37 @@
 import React, {Component} from "react";
 export class FormInput extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      value: ""
+    }
+  }
+
+  updateValue = (e) => {
+    const val = e.target ?  e.target.value : "";
+    console.log(val);
+    this.setState({
+      value: val
+    });
+  }
+
   render(){
-    const {className, title, name, input, type, placeholder} = this.props;
+    const {className, title, name, input, type, placeholder, editValue} = this.props;
     return(
       <div className="form-input">
         <label className="form-input__label">{title}</label>
-        <input className={`${className} form-input__input`} type={type} {...input} placeholder={placeholder} />
+        <input className={`${className} form-input__input`} type={type} placeholder={placeholder} value={ editValue && this.state.value == "" ? editValue : this.state.value} onChange={(e) => this.updateValue(e)} {...input}/>
       </div>
     );
   }
 }
 export class FormTextArea extends Component {
   render(){
-    const {className, title, name, input, type, placeholder} = this.props;
+    const {className, title, name, input, type, placeholder, editValue} = this.props;
     return(
       <div className="form-textarea">
         <label className="form-textarea__label">{title}</label>
-        <textarea className={`${className} form-textarea__input`} type={type} {...input} placeholder={placeholder} rows="5"></textarea>
+        <textarea className={`${className} form-textarea__input`} type={type}  placeholder={placeholder} rows="5"  {...input}></textarea>
       </div>
     );
   }

@@ -18,7 +18,7 @@ class NewsletterLatest extends Component {
         <div className="newsletter-latest__image">
           <img src={imageURL} />
         </div>
-        <Button callback={() => this.handleEdit()} icon="fas fa-pencil-alt" className="newsletter-latest__edit-button"/>
+        <Button callback={() => this.handleEdit()} icon="fas fa-pencil-alt" className="newsletter-latest__edit-button" editNewsletter={this.props}/>
         <div className="newsletter-latest__body">
           <p>{body}</p>
         </div>

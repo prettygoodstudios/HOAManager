@@ -20,6 +20,7 @@ export function signUp(fields, success){
 }
 export function signIn(fields, success){
   return function(dispatch){
+    console.log(fields);
     axios.post(`${ROOT_URL}/signIn`,fields).then((data) => {
       console.log(data.data);
       const {token} = data.data;

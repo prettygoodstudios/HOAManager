@@ -19,6 +19,7 @@ class EditNewsletter extends Component {
   }
 
   render(){
+    console.log(this.props.newsletterEdit);
     return(
       <div className="new-newsletter">
         <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()}
