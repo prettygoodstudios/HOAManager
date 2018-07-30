@@ -17,6 +17,7 @@
   &__title{
     grid-row: title-s/title-e;
     grid-column: title-s/title-e;
+
   }
   &__date{
     grid-row: s/e;
@@ -37,6 +38,44 @@
   }
   &__description-text{
 
+  }
+  &__description-image{
+
+  }
+}
+.requests-item{
+  &__icon{
+    font-size: 3rem;
+  }
+  &__tenant-unit{
+    color: $color-red;
+    font-family: $font-encode-condensed;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  &__title{
+    color: $color-gray-4d;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+  }
+  &__date{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  &__move{
+
+  }
+  &__arrow{
+    font-size: 3rem;
+    color: $color-gray-4d;
+  }
+  &__description{
+
+  }
+  &__description-text{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
   }
   &__description-image{
 
