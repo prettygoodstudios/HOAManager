@@ -7,7 +7,7 @@ class RequestsBoxes extends Component{
       <div className='requests-boxes'>
         <RequestsBox title="Pending" count={2} />
         <RequestsBox title="In Progress" count={5} />
-        <RequestsBox title="Incomplete" count={3} />
+        <RequestsBox title="Complete" count={3} />
       </div>
     );
   }

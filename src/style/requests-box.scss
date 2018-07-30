@@ -1,3 +1,33 @@
+.requests-box-active{
+  background-color: $color-red;
+  border-color: $color-red;
+  color: white;
+  .requests-box{
+    &__title{
+
+    }
+    &__count{
+      color: white;
+    }
+    &__caret{
+      background-color: $color-red !important;
+      border-color: $color-red;
+    }
+  }
+}
+.requests-box-inactive{
+  border-color: $color-gray-e6;
+
+  .requests-box{
+    &__count{
+      color: $color-gray-4d;
+    }
+    &__caret{
+      display: none;
+    }
+  }
+}
+
 .requests-box{
   grid-column: box-s/box-e;
   grid-row: box-s/box-e;

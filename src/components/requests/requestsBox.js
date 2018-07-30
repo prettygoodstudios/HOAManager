@@ -10,11 +10,11 @@ class RequestsBox extends Component {
       return <div>...fetching requests</div>;
     }
     return(
-      <div className="requests-box">
+      <a className="requests-box  requests-box-active" onClick={() => console.log("Selecting Box.")}>
         <div className="requests-box__count">{count}</div>
         <div className="requests-box__title">{title}</div>
         <div className="requests-box__caret"></div>
-      </div>
+      </a>
     );
   }
 }
