@@ -13,11 +13,16 @@
   &__tenant-unit{
     grid-row: tenant-s/tenant-e;
     grid-column: title-s/title-e;
+    align-self: start;
   }
   &__title{
     grid-row: title-s/title-e;
     grid-column: title-s/title-e;
-
+    align-self: end;
+    display: grid;
+    grid-template-columns: 1fr 3rem;
+    grid-column-gap: 2rem;
+    grid-template-rows: 1fr;
   }
   &__date{
     grid-row: s/e;
@@ -40,7 +45,6 @@
 
   }
   &__description-image{
-
   }
 }
 .requests-item{
@@ -54,10 +58,12 @@
     line-height: 1.8rem;
   }
   &__title{
-    color: $color-gray-4d;
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 2.3rem;
+    &__text{
+      color: $color-gray-4d;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.3rem;
+    }
   }
   &__date{
     font-size: 1.4rem;
