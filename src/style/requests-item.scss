@@ -1,7 +1,11 @@
+.requests-item-closed{
+    grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 3.4rem [tenant-e e];
+}
+
 .requests-item{
   background-color: transparent !important;
   display: grid;
-  grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 3.4rem [tenant-e e description-s] 1.47rem [description-e];
+  grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 1.5rem [tenant-e e description-s] 1fr [description-e];
   grid-template-columns: [s icon-s] 6.8rem [icon-e title-s] minmax(40px, 1fr) [title-e arrow-s] 6.8rem [arrow-e date-s] 10rem [date-e e];
   //align-items: center;
   &__icon{
@@ -48,6 +52,7 @@
   }
 }
 .requests-item{
+  padding: 1.3rem;
   &__icon{
     font-size: 3rem;
   }
@@ -77,7 +82,8 @@
     color: $color-gray-4d;
   }
   &__description{
-
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   &__description-text{
     font-size: 1.4rem;
@@ -85,5 +91,8 @@
   }
   &__description-image{
 
+  }
+  &:hover{
+    background-color: $color-gray-f8 !important;
   }
 }
