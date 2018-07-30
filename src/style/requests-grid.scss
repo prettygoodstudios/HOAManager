@@ -1,8 +1,8 @@
 .requests-grid{
   display: grid;
   grid-row: content-s/content-e;
-  grid-template-rows: [add-s] 4.7rem [add-e s box-s] 16rem [box-e archive-s] 1fr [archive-e] 1fr [e];
-  grid-template-columns: [box-s archive-s] 16rem [box-e latest-s archive-e] 1fr [latest-e];
+  grid-template-rows: [add-s] 4.7rem [add-e s boxes-s] 1fr [e boxes-e];
+  grid-template-columns: [boxes-s] 16rem [boxes-e requests-s] 1fr [requests-e];
   grid-column-gap: 3rem;
 
   &__button{
