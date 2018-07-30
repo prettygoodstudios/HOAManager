@@ -2,7 +2,7 @@ import {CHANGE_SELECTED_REQUEST_TYPE} from '../actions/types';
 
 const INIT_STATE = {
   requests: [],
-  selectedRequests: 'pending'
+  selectedRequests: 'Pending'
 }
 
 export default function(state = INIT_STATE, action){
