@@ -1,0 +1,34 @@
+.requests-box{
+  grid-column: box-s/box-e;
+  grid-row: box-s/box-e;
+  height: 16rem;
+  width: 16rem;
+  border: 0.15rem solid $color-red;
+  border-radius: 0.5rem;
+  display: grid;
+  justify-items: center;
+  position: relative;
+  align-items: center;
+  color: $color-red;
+  margin-bottom: 1.55rem;
+  &__count{
+    align-self: end;
+    font-size: 6.5rem;
+    line-height: 1.5rem;
+  }
+  &__title{
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+  &__caret{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(52%,-50%) rotate(45deg);
+    border: 0.15rem solid $color-red;
+    background-color: white;
+    border-style: solid solid none none;
+  }
+}
