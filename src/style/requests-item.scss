@@ -1,3 +1,44 @@
 .requests-item{
   background-color: transparent !important;
+  display: grid;
+  grid-template-rows: [s title-s] 3.4rem [title-e tenant-s] 3.4rem [tenant-e e description-s] 1.47rem [description-e];
+  grid-template-columns: [s icon-s] 6.8rem [icon-e title-s] minmax(40px, 1fr) [title-e arrow-s] 6.8rem [arrow-e date-s] 10rem [date-e e];
+  //align-items: center;
+  &__icon{
+    grid-row: s/e;
+    grid-column: icon-s/icon-e;
+    justify-self: center;
+    align-self: center;
+  }
+  &__tenant-unit{
+    grid-row: tenant-s/tenant-e;
+    grid-column: title-s/title-e;
+  }
+  &__title{
+    grid-row: title-s/title-e;
+    grid-column: title-s/title-e;
+  }
+  &__date{
+    grid-row: s/e;
+    grid-column: date-s/date-e;
+  }
+  &__move{
+    grid-row: s/e;
+    grid-column: icon-s/icon-e;
+    display: none;
+  }
+  &__description{
+    grid-row: description-s/description-e;
+    grid-column: s/e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 4rem;
+  }
+  &__description-text{
+
+  }
+  &__description-image{
+
+  }
 }

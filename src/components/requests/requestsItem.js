@@ -18,6 +18,12 @@ class RequestsItem extends Component{
           2/2/2016
         </div>
         <Button icon="fas fa-wrench" className="requests-item__move" callback={() => console.log("Change Request status.")}/>
+        <div className="requests-item__description">
+          <img src="http://via.placeholder.com/160x94" className="requests-item__description-image"/>
+          <p className="requests-item__description-text">
+            jhafdkafjdksjdfaskljadfsjklfdasklfdslkljioqrueiorqewujdslkajfl.
+          </p>
+        </div>
       </div>
     );
   }
