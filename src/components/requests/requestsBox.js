@@ -10,7 +10,7 @@ class RequestsBox extends Component {
       return <div>...fetching requests</div>;
     }
     return(
-      <a className="requests-box  requests-box-active" onClick={() => console.log("Selecting Box.")}>
+      <a className="requests-box  requests-box-active" onClick={() => this.props.changeSelectedRequestType(title)}>
         <div className="requests-box__count">{count}</div>
         <div className="requests-box__title">{title}</div>
         <div className="requests-box__caret"></div>
