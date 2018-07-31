@@ -53,10 +53,13 @@ export class FormButton extends Component {
   }
 }
 export class FormImage extends Component {
+
+
   handleSelectedImage = (event) => {
-    console.log("hey there");
+    const {onChange} = this.props.input;
     let img = document.getElementById("frm-img");
     img.src = URL.createObjectURL(event.target.files[0]);
+    this.props.input.value = event.target.files[0];
   }
   render(){
     let {className, title, name, imageURL, type, input} = this.props;

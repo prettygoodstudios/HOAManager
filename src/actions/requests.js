@@ -12,10 +12,10 @@ export function changeSelectedRequestType(title){
 }
 
 
-export function createNewRequest(userId, newRequest, success){
+export function createNewRequest(userId, fields, success){
   console.log("Token: ",localStorage.getItem("token"));
   return function(){
-    axios.post(ROOT_URL+"/requests/new", newRequest).then((d) => {
+    axios.post(ROOT_URL+"/requests/new", fields).then((d) => {
       success();
     }).catch((e) => {
       console.log(e);
