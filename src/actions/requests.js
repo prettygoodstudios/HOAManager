@@ -45,3 +45,19 @@ export function fetchRequests(){
     });
   }
 }
+
+export function changeStatus({_id, status}){
+  console.log(_id, status);
+  const token = localStorage.getItem("token");
+  return function(){
+    axios.post(`${ROOT_URL}/requests/update-status`,{id: _id, status},{
+      headers: {
+        authorization: token
+      }
+    }).then((d) => {
+      console.log(d.data);
+    }).catch((e) => {
+      console.log(e);
+    });
+  }
+}

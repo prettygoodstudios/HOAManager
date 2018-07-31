@@ -25,7 +25,7 @@ function mapStateToProps(state){
       case "pending":
         pending++;
         break;
-      case "progress":
+      case "in-progress":
         progress++;
         break;
       case "complete":

@@ -9,8 +9,8 @@ class Requests extends Component{
   correctRequestType = (r) => {
     let val = false;
     switch(r.status){
-      case "progress":
-        val =  this.props.selectedRequest == 'In progress';
+      case "in-progress":
+        val =  this.props.selectedRequest == 'In Progress';
         break;
       case "pending":
         val =  this.props.selectedRequest == 'Pending';
