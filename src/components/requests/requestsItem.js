@@ -31,10 +31,25 @@ class RequestsItem extends Component{
   render(){
     const {status, title, body, imageUrl, date, _id} = this.props;
     const parsedDate = new Date(date);
-
+    let iconString = "fas fa-wrench";
+    let mainIcon = "fas fa-exclamation-triangle";
+    switch(status){
+      case 'in-progress':
+        iconString = "fas fa-check-square";
+        mainIcon = "fas fa-wrench"
+        break;
+      case 'complete':
+        iconString = "fas fa-exclamation-triangle";
+        mainIcon = 'fas fa-check-square';
+        break;
+      case 'pending':
+        iconString = "fas fa-wrench";
+        mainIcon = "fas fa-exclamation-triangle";
+        break;
+    }
     return(
       <div className={`requests-item ${this.state.height == "auto" ? "bg-f8" : ""}`}>
-        {icon("fas fa-exclamation-triangle","requests-item__icon")}
+        {icon(mainIcon,"requests-item__icon")}
         <div className="requests-item__title">
           <div className="requests-item__title__text">{title}</div>
           {icon("fas fa-sort-down","requests-item__arrow",() => this.toggle())}
@@ -45,7 +60,7 @@ class RequestsItem extends Component{
         <div className="requests-item__date">
           {`${parsedDate.getMonth()+1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`}
         </div>
-        <Button icon="fas fa-wrench" className="requests-item__move" callback={() => this.handleStatus()}/>
+        <Button icon={iconString} className="requests-item__move" callback={() => this.handleStatus()}/>
         <div className="requests-item__description">
           <AnimateHeight duration={300} height={this.state.height}>
             <div className="requests-item__description">
