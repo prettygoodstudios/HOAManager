@@ -6,12 +6,12 @@ class NewNewsletter extends Component {
     console.log("Submitting", fields);
   }
   onCancel = () => {
-    console.log("canceling");
+    this.props.history.push("/dashboard");
   }
   render(){
     return(
       <div className="new-newsletter">
-        <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()}/>
+        <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()} field1Placeholder={"Newlsetter Title Here"} field1Title={"Title"} field2Placeholder="Newsletter Body Here" field2Title="Newsletter Body"/>
       </div>
     );
   }

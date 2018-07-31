@@ -7,6 +7,7 @@ class NewsletterNewForm extends Component{
 
   render(){
     const { handleSubmit, editNewsletter} = this.props;
+    const { field1Placeholder, field1Title,  field2Placeholder, field2Title} = this.props;
     console.log("Edit Newsletter",editNewsletter);
     let title = null;
     let body = null;
@@ -17,8 +18,8 @@ class NewsletterNewForm extends Component{
     return(
       <form className="new-newsletter-form" onSubmit={handleSubmit}>
         <div></div>
-        <Field component={FormInput} name="title" title="Title" type="text" className="new-newsletter-form__title" placeholder="Newsletter Title" editValue={title}/>
-        <Field component={FormTextArea} name="body" title="Body" type="text" className="new-newsletter-form__body" placeholder="Newsletter Body" editValue={editNewsletter}/>
+        <Field component={FormInput} name="title" title={field1Title} type="text" className="new-newsletter-form__title" placeholder={field1Placeholder} editValue={title}/>
+        <Field component={FormTextArea} name="body" title={field2Title} type="text" className="new-newsletter-form__body" placeholder={field2Placeholder} editValue={editNewsletter}/>
         <Field component={FormImage} name="image" title="Image" type="file" className="new-newsletter-form__image" placeholder="Newsletter Image" src={editNewsletter}/>
         <Field name="cancel" title="Cancel" className="new-newsletter-form__cancel" component={FormButton} type="button" small={true} red={false} onClick={this.props.onCancel}/>
         <Field name="submit" title="Submit" className="new-newsletter-form__submit" component={FormButton} type="submit" small={true} red={true} />

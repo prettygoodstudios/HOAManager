@@ -11,7 +11,7 @@ class NewRequest extends Component {
   render(){
     return(
       <div className="new-request">
-        <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()}/>
+        <NewsletterNewForm title="New Request" onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()} field1Placeholder='Service Request Title Here' field1Title='Service Request Title' field2Title="Service Request Description" field2Placeholder="Service Request Description Here"/>
       </div>
     );
   }

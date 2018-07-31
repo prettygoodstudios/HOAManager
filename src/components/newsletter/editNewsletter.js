@@ -11,7 +11,7 @@ class EditNewsletter extends Component {
     console.log("Submitting", fields);
   }
   onCancel = () => {
-    console.log("canceling");
+    this.props.history.push("/dashboard");
   }
 
   componentDidMount(){
@@ -23,7 +23,7 @@ class EditNewsletter extends Component {
     return(
       <div className="new-newsletter">
         <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()}
-        title="Edit Newsletter" editNewsletter={this.props.newsletterEdit}/>
+        title="Edit Newsletter" editNewsletter={this.props.newsletterEdit} field1Placeholder={"Newlsetter Title Here"} field1Title={"Title"} field2Placeholder="Newsletter Body Here" field2Title="Newsletter Body"/>
       </div>
     );
   }
