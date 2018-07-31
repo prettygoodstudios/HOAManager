@@ -3,12 +3,12 @@ import React, {Component} from "react";
 import Button from "../button";
 import RequestsBoxes from "./requestsBoxes";
 import Requests from "./requests";
-import RequestsItem from "./requestsItem";
+import history from "../../history";
 
 class RequestsGrid extends Component {
 
   handleAddRequest = () => {
-    console.log("Requifdasioua");
+    history.push("/requests/new");
   }
 
   render(){

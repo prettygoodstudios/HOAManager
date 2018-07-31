@@ -37,6 +37,10 @@
     grid-row: s/e;
     grid-column: date-s/date-e;
     justify-self: right;
+    &:hover{
+      color: $color-red !important;
+      border-color: $color-red !important;
+    }
   }
   &__description{
     grid-row: description-s/description-e;
