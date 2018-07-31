@@ -21,6 +21,13 @@ class RequestsItem extends Component{
     });
   }
 
+  handleStatus = () => {
+    const {_id, status} = this.props;
+    this.props.changeStatus({_id, status}, () => {
+      this.props.fetchRequests();
+    });
+  }
+
   render(){
     const {status, title, body, imageUrl, date, _id} = this.props;
     const parsedDate = new Date(date);
@@ -38,7 +45,7 @@ class RequestsItem extends Component{
         <div className="requests-item__date">
           {`${parsedDate.getMonth()+1}/${parsedDate.getDate()}/${parsedDate.getFullYear()}`}
         </div>
-        <Button icon="fas fa-wrench" className="requests-item__move" callback={() => this.props.changeStatus({_id, status})}/>
+        <Button icon="fas fa-wrench" className="requests-item__move" callback={() => this.handleStatus()}/>
         <div className="requests-item__description">
           <AnimateHeight duration={300} height={this.state.height}>
             <div className="requests-item__description">
