@@ -5,7 +5,7 @@ const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 class RequestsBox extends Component {
   render(){
     const {count, title, selected} = this.props;
-    if(!count){
+    if(!count && count != 0){
       console.log("No Count");
       return <div>...fetching requests</div>;
     }
