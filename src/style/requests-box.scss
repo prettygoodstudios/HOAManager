@@ -13,6 +13,9 @@
       background-color: $color-red !important;
       border-color: $color-red;
     }
+    &__icon{
+      color: white !important;
+    }
   }
 }
 .requests-box-inactive{
@@ -45,10 +48,11 @@
   align-items: center;
   color: $color-red;
   margin-bottom: 1.55rem;
-  &__count{
+  &__count, &__icon{
     align-self: end;
     font-size: 6.5rem;
     line-height: 1.5rem;
+    opacity: 1;
   }
   &__title{
     font-size: 1.8rem;
@@ -64,5 +68,22 @@
     border: 0.15rem solid $color-red;
     background-color: white;
     border-style: solid solid none none;
+  }
+  &__icon{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+  }
+  &:hover{
+    .requests-box__icon{
+      transition: all 0.3s ease;
+      opacity: 1;
+    }
+    .requests-box__count{
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
   }
 }
