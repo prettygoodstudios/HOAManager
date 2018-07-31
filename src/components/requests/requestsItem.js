@@ -20,7 +20,7 @@ class RequestsItem extends Component{
 
   render(){
     return(
-      <div className="requests-item">
+      <div className={`requests-item ${this.state.height == "auto" ? "bg-f8" : ""}`}>
         {icon("fas fa-exclamation-triangle","requests-item__icon")}
         <div className="requests-item__title">
           <div className="requests-item__title__text">The power is out.</div>

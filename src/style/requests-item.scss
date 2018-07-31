@@ -31,11 +31,12 @@
   &__date{
     grid-row: s/e;
     grid-column: date-s/date-e;
+    align-self: center;
   }
   &__move{
     grid-row: s/e;
-    grid-column: icon-s/icon-e;
-    display: none;
+    grid-column: date-s/date-e;
+    justify-self: right;
   }
   &__description{
     grid-row: description-s/description-e;
@@ -74,9 +75,6 @@
     font-size: 1.4rem;
     line-height: 1.7rem;
   }
-  &__move{
-
-  }
   &__arrow{
     font-size: 3rem;
     color: $color-gray-4d;
@@ -88,11 +86,31 @@
   &__description-text{
     font-size: 1.4rem;
     line-height: 1.7rem;
+    word-wrap: break-word;
   }
   &__description-image{
 
   }
+  &__move{
+    transform: translateX(-100);
+    opacity: 0;
+    color: $color-gray-4d !important;
+    border-color: $color-gray-4d !important;
+    align-self: center;
+  }
   &:hover{
     background-color: $color-gray-f8 !important;
+    .requests-item__move{
+      transition: all 0.3s ease;
+      transform: translateX(-100px);
+      opacity: 100;
+    }
+    .requests-item__date{
+      transition: all 0.3s ease;
+      transform: translateX(-200px);
+    }
   }
+}
+.bg-f8{
+  background-color: $color-gray-f8 !important;
 }
