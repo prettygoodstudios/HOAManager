@@ -59,7 +59,7 @@ export class FormImage extends Component {
     const {onChange} = this.props.input;
     let img = document.getElementById("frm-img");
     img.src = URL.createObjectURL(event.target.files[0]);
-    this.props.input.value = event.target.files[0];
+    onChange(event.target.files[0]);
   }
   render(){
     let {className, title, name, imageURL, type, input} = this.props;
@@ -68,7 +68,7 @@ export class FormImage extends Component {
         <label className="form-image__title">{title}</label>
         <img className="form-image__image" id="frm-img" src={imageURL} />
         <input className="form-image__replace" type="button" value="Replace" onClick={() => document.getElementById("file") ? document.getElementById("file").click() : ''}/>
-        <input type={type} style={{display: 'none'}} id="file" name="file" accepts="image/*" {...input} onChange={(event) => this.handleSelectedImage(event)}/>
+        <input type={type} style={{display: 'none'}} id="file" name="file" accepts="image/*" {...input} onChange={(event) => this.handleSelectedImage(event)} value={undefined}/>
       </div>
     );
   }
