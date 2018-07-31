@@ -12,7 +12,8 @@ export function changeSelectedRequestType(title){
 }
 
 
-export function createNewRequest(newRequest, success){
+export function createNewRequest(userId, newRequest, success){
+  console.log("Token: ",localStorage.getItem("token"));
   return function(){
     axios.post(ROOT_URL+"/requests/new", newRequest).then((d) => {
       success();

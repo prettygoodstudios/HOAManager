@@ -1,11 +1,18 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+import * as actions from "../../actions";
+
 import NewsletterNewForm from "../newsletter/newsletterNewForm";
 class NewRequest extends Component {
   onSubmit = (fields) => {
     this.props.history.push("/dashboard");
     console.log("Submitting", fields);
+    this.props.createNewRequest(this.props.id, {}, () =>  this.success());
   }
   onCancel = () => {
+    this.props.history.push("/dashboard");
+  }
+  success = () => {
     this.props.history.push("/dashboard");
   }
   render(){
@@ -16,4 +23,11 @@ class NewRequest extends Component {
     );
   }
 }
-export default NewRequest;
+
+function mapStateToProps(state){
+  return{
+   id: state.auth.user._id
+  }
+}
+
+export default connect(mapStateToProps, actions)(NewRequest);
