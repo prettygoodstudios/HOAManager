@@ -5,6 +5,12 @@ import SignUpForm from "./signUpForm";
 import FormTitle from "../formTitle";
 
 class SignUp extends Component{
+
+
+  componentDidMount(){
+    this.props.setHeader("HOA Manager", "A property management solution.", false);
+  }
+
   onSubmit = (fields) => {
     this.props.signUp(fields, () => {
       this.props.history.push("/dashboard");

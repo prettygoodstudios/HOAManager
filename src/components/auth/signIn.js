@@ -10,6 +10,9 @@ class SignIn extends Component{
       this.props.history.push("/dashboard");
     });
   }
+  componentDidMount(){
+    this.props.setHeader("HOA Manager", "A property management solution.", false);
+  }
   render(){
     return(
       <div className="sign-in">
