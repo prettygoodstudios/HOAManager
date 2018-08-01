@@ -9,7 +9,7 @@ class NewNewsletter extends Component {
     var formData = new FormData();
     formData.append('title',title);
     formData.append('body',body);
-    formData.append('file',image);
+    formData.append('image',image);
     console.log("Title",title);
     console.log("Body",body);
     console.log("Image",image);

@@ -43,3 +43,18 @@ export function createNewNewsletter(formData, success){
     });
   }
 }
+export function editNewsletter(id, formData, success){
+  const token = localStorage.getItem("token");
+  return function(){
+    axios.post(ROOT_URL+"/newsletters/edit/"+id, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        authorization: token
+      }
+    }).then((d) => {
+      success();
+    }).catch((e) => {
+      console.log(e);
+    });
+  }
+}
