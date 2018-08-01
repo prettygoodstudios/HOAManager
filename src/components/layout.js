@@ -1,14 +1,24 @@
 import React, {Component} from "react";
+import {connect} from "react-redux";
+
 import Header from "./header";
 class Layout extends Component{
   render(){
+    const {hideBar, title, subtitle} = this.props;
     return(
       <div className="layout">
-        <Header title="HOA Manager" subtitle="A property managment solution."/>
-        <div className="bar"></div>
+        <Header title={title} subtitle={subtitle}/>
+        { !hideBar && <div className="bar"></div>}
         {this.props.children}
       </div>
     );
   }
 }
-export default Layout;
+
+function mapStateToProps(state){
+  return{
+    ...state.header
+  }
+}
+
+export default connect(mapStateToProps, null)(Layout);
