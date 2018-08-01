@@ -16,18 +16,18 @@ export class FormInput extends Component {
   }
 
   render(){
-    const {className, title, name, input, type, placeholder, editValue} = this.props;
+    const {className, title, name, input, type, placeholder} = this.props;
     return(
       <div className="form-input">
         <label className="form-input__label">{title}</label>
-        <input className={`${className} form-input__input`} type={type} placeholder={placeholder} value={ editValue && this.state.value == "" ? editValue : this.state.value} onChange={(e) => this.updateValue(e)} {...input}/>
+        <input className={`${className} form-input__input`} type={type} placeholder={placeholder} onChange={(e) => this.updateValue(e)} {...input}/>
       </div>
     );
   }
 }
 export class FormTextArea extends Component {
   render(){
-    const {className, title, name, input, type, placeholder, editValue} = this.props;
+    const {className, title, name, input, type, placeholder} = this.props;
     return(
       <div className="form-textarea">
         <label className="form-textarea__label">{title}</label>

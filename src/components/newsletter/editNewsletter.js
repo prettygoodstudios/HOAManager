@@ -19,20 +19,15 @@ class EditNewsletter extends Component {
   }
 
   render(){
-    console.log(this.props.newsletterEdit);
+
     return(
       <div className="new-newsletter">
         <NewsletterNewForm onSubmit={(event) => this.onSubmit(event)} onCancel={() => this.onCancel()}
-        title="Edit Newsletter" editNewsletter={this.props.newsletterEdit} field1Placeholder={"Newlsetter Title Here"} field1Title={"Title"} field2Placeholder="Newsletter Body Here" field2Title="Newsletter Body"/>
+        title="Edit Newsletter" field1Placeholder={"Newlsetter Title Here"} field1Title={"Title"} field2Placeholder="Newsletter Body Here" field2Title="Newsletter Body"/>
       </div>
     );
   }
 }
-function mapStateToProps(state){
-  const {newsletterEdit} = state.newsletter;
-  return {
-    newsletterEdit: newsletterEdit
-  }
-}
 
-export default connect(mapStateToProps,actions)(EditNewsletter);
+
+export default connect(null ,actions)(EditNewsletter);

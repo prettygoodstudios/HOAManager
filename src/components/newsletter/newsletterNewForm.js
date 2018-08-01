@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {reduxForm, Field} from "redux-form";
+import {connect} from "react-redux";
 import {FormInput, FormButton, FormTextArea, FormImage} from "../formFields";
 import TextLink from "../TextLink";
+import {ROOT_URL} from "../../config";
 class NewsletterNewForm extends Component{
 
 
@@ -20,7 +22,7 @@ class NewsletterNewForm extends Component{
         <div></div>
         <Field component={FormInput} name="title" title={field1Title} type="text" className="new-newsletter-form__title" placeholder={field1Placeholder} editValue={title}/>
         <Field component={FormTextArea} name="body" title={field2Title} type="text" className="new-newsletter-form__body" placeholder={field2Placeholder} editValue={editNewsletter}/>
-        <Field component={FormImage} name="image" title="Image" type="file" className="new-newsletter-form__image" placeholder="Newsletter Image" src={editNewsletter}/>
+        <Field component={FormImage} name="image" title="Image" type="file" className="new-newsletter-form__image" placeholder="Newsletter Image" src={editNewsletter} imageUrl={this.props.initialValues.imageUrl ? `${ROOT_URL}/${this.props.initialValues.imageUrl}` : ""}/>
         <Field name="cancel" title="Cancel" className="new-newsletter-form__cancel" component={FormButton} type="button" small={true} red={false} onClick={this.props.onCancel}/>
         <Field name="submit" title="Submit" className="new-newsletter-form__submit" component={FormButton} type="submit" small={true} red={true} />
       </form>
@@ -28,6 +30,15 @@ class NewsletterNewForm extends Component{
   }
 }
 NewsletterNewForm = reduxForm({
-  form: 'signin'
+  form: 'signin',
+  enableReinitialize: true
 })(NewsletterNewForm);
-export default NewsletterNewForm;
+
+function mapStateToProps(state){
+  const {newsletterEdit} = state.newsletter;
+  return{
+    initialValues: newsletterEdit
+  }
+}
+
+export default connect(mapStateToProps)(NewsletterNewForm);
