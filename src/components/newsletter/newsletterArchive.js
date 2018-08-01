@@ -4,10 +4,11 @@ import history from "../../history";
 
 
 function ArchiveItem({title, date, _id, callback}){
+  const parsedDate = new Date(date);
   return(
     <a className="archive-item archive-items__item" onClick = {() => callback(_id)}>
       <div className="archive-item__title">{title}</div>
-      <div className="archive-item__date">{date.getUTCMonth()+1}/{date.getDate()}/{date.getFullYear()-2000}</div>
+      <div className="archive-item__date">{parsedDate.getUTCMonth()+1}/{parsedDate.getDate()}/{parsedDate.getFullYear()-2000}</div>
     </a>
   );
 }

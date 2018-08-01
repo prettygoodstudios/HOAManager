@@ -5,15 +5,23 @@ import * as actions from "../../actions";
 import NewsletterNewForm from "./newsletterNewForm";
 class NewNewsletter extends Component {
   onSubmit = (fields) => {
-
+    const {title, body, image} = fields;
     var formData = new FormData();
     formData.append('title',title);
     formData.append('body',body);
     formData.append('image',image);
-    this.props.history.push("/dashboard");
-    this.props.createNewNewsletter(this.props.id, formData, () =>  this.success());
+    console.log("Title",title);
+    console.log("Body",body);
+    console.log("Image",image);
+    console.log(formData);
+    this.props.createNewNewsletter(formData, () =>  this.success());
   }
   onCancel = () => {
+    this.props.history.push("/dashboard");
+  }
+
+  success = () => {
+    console.log("success");
     this.props.history.push("/dashboard");
   }
   render(){
