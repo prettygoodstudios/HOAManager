@@ -3,7 +3,14 @@ import {ROOT_URL} from "../config";
 import {AUTHENTICATE_USER} from "./types";
 export function signUp(fields, success){
   return function(dispatch){
-    axios.post(`${ROOT_URL}/signUp`, fields).then((data) => {
+    let newFields = {
+      admin: false
+    }
+    newFields = {
+      ...fields,
+      ...newFields
+    }
+    axios.post(`${ROOT_URL}/signUp`, newFields).then((data) => {
       const { token } = data.data;
       localStorage.setItem('token',token);
       dispatch({
